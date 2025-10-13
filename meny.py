@@ -23,7 +23,7 @@ def meny():
         
         if valg == "1":
             kode = input("Emnekode: ")
-            sem = input("Semester (høst/vår): ")
+            sem = input("Semester (høst/vår): ").lower()
             sp = int(input("Studiepoeng: "))
             menyvalg_1(kode, sem, sp)
         elif valg == "2":
@@ -47,4 +47,5 @@ def meny():
             print("Ugyldig valg.")
 
 if __name__ == "__main__":
+
     meny()

@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 13 14:17:22 2025
+#les opp emnene i fil fra menyvalg 6
 
-@author: 02lab
-"""
-
+with open('studieplan.txt', 'r') as fila:
+    for linje in fila:
+        print(linje + '\n')
+        

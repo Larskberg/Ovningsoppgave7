@@ -1,7 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 13 14:23:29 2025
+#lag en fil av studieplanen
 
-@author: 02lab
-"""
-
+def studieplan(emnekode, studiepoeng, semester):
+    filnavn = 'studieplan.txt'
+    with open(filnavn, "w") as fila:
+        for emne in emne_liste:
+            #skrive fil med 3 verdier per inje
+            fila.write('\n' + emnekode, studiepoeng, semester)
+            
+            print('Laget fil med studieplan')
+           

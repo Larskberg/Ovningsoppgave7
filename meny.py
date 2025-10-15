@@ -1,4 +1,4 @@
-# hovedmeny.py
+# Hovedmenyen
 from menyvalg_1 import kjør1
 from menyvalg_2 import kjør2
 from menyvalg_3 import kjør3
@@ -43,4 +43,5 @@ def meny():
             print("Ugyldig valg.")
 
 if __name__ == "__main__":
+
     meny()

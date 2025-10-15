@@ -1,4 +1,4 @@
-# menyvalg_6.py
+# Lagre studieplan til fil
 from emner import emnekoder, semestre, studiepoeng
 from studieplan import hent_studieplan
 
@@ -17,4 +17,5 @@ def emnefil():
     with open(filnavn, 'w') as fila:
         for i, kode in enumerate(emnekoder):
             fila.write(f"{kode}, {studiepoeng[i]}, {semestre[i]}\n")
+
     print("Laget fil med emner")

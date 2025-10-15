@@ -7,13 +7,13 @@
 from studieplan import hent_studieplan
 from emner import studiepoeng
 
-studiepan = hent_studieplan
+studieplan = hent_studieplan()
 
 def gyldig_semestre(studieplan):
     poeng = 0
     ugyldig = []
     for i, sem in studieplan:
-        poeng += studiepoeng[i]
+        poeng = sum(studiepoeng[j] for j in sem)
         
         if poeng != 30:
             ugyldig.append(i + 1, poeng)

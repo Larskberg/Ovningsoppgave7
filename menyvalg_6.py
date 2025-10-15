@@ -1,12 +1,14 @@
 #lag en fil av studieplanen
 from emner import emnekoder, semestre, studiepoeng
-from studieplan import studieplan
+from studieplan import hent_studieplan
+
+studieplan = hent_studieplan()
 
 def studieplanfil(studieplan):
     filnavn = 'studieplan.txt'
     with open(filnavn, "w") as fila:
         for liste in studieplan:
-            semester_linje = f'{liste}. semster:\n'
+            semester_linje = f'{liste + 1}. semster:\n'
             fila.write(semester_linje)
             for i, liste in studieplan:
                 linje = f'{emnekoder[i]}, {studiepoeng[i]}, {semestre[i]}\n'

@@ -1,11 +1,11 @@
-# Menyvalg
-import menyvalg_1
-import menyvalg_2
-import menyvalg_3
-import menyvalg_4
-import menyvalg_5
-import menyvalg_6
-import menyvalg_7
+# hovedmeny.py
+from menyvalg_1 import kjør1
+from menyvalg_2 import kjør2
+from menyvalg_3 import kjør3
+from menyvalg_4 import kjør4
+from menyvalg_5 import gyldig_semestre
+from menyvalg_6 import studieplanfil, emnefil
+from menyvalg_7 import les_fra_fil
 
 def meny():
     while True:
@@ -22,24 +22,20 @@ def meny():
         valg = input("Velg: ")
         
         if valg == "1":
-            kode = input("Emnekode: ")
-            sem = input("Semester (høst/vår): ")
-            sp = int(input("Studiepoeng: "))
-            menyvalg_1(kode, sem, sp)
+            kjør1()
         elif valg == "2":
-            emne_index = int(input("Indeks på emne: "))
-            sem_nr = int(input("Semester (1-6): "))
-            menyvalg_2(emne_index, sem_nr)
+            kjør2()
         elif valg == "3":
-            menyvalg_3()
+            kjør3()
         elif valg == "4":
-            menyvalg_4()
+            kjør4()
         elif valg == "5":
-            menyvalg_5()
+            gyldig_semestre()
         elif valg == "6":
-            menyvalg_6()
+            studieplanfil()
+            emnefil()
         elif valg == "7":
-            menyvalg_7()
+            les_fra_fil()
         elif valg == "8":
             print("Avslutter...")
             break

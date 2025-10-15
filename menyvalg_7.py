@@ -1,7 +1,16 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 13 14:17:22 2025
+#les opp emnene i fil fra menyvalg 6
+def les_fra_fil():
+    with open('studieplan.txt', 'r') as fila:
+        print('Studieplan:')
+        for linje in fila:
+            print(linje + '\n')
+            
+            
+            
+    with open('emner.txt', 'r') as fila:
+        print('Emner:')
+        for linje in fila:
+            print(linje + '\n')
 
-@author: 02lab
-"""
-
+    
+            

@@ -1,0 +1,3 @@
+emnekoder = []
+semestre = []
+studiepoeng = []

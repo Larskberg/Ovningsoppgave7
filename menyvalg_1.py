@@ -1,6 +1,7 @@
+# menyvalg_1.py
 from emner import emnekoder, semestre, studiepoeng
 
-def kjør():
+def kjør1():
     print("\n--- Legg til nytt emne ---")
     kode = input("Emnekode: ")
     sem = input("Semester (høst/vår): ").lower()

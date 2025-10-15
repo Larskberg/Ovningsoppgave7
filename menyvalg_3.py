@@ -1,4 +1,4 @@
-# menyvalg_3.py
+# Printer registretre emner
 from emner import emnekoder, semestre, studiepoeng
 
 def kjør3():

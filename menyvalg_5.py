@@ -1,4 +1,4 @@
-# menyvalg_5.py
+# Sjekker gyldighet av studieplanen
 from studieplan import hent_studieplan
 from emner import studiepoeng
 
@@ -17,3 +17,4 @@ def gyldig_semestre():
         print("Studieplanen er ikke gyldig")
         for sem, poeng in ugyldig:
             print(f"Semester {sem} har {poeng} poeng")
+

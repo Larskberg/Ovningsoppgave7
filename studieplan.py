@@ -39,5 +39,3 @@ def legg_til_emne(emne_index, semester_nr):
 
 def hent_studieplan():
     return studieplan
-
-

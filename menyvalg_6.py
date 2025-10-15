@@ -17,5 +17,4 @@ def emnefil():
     with open(filnavn, 'w') as fila:
         for i, kode in enumerate(emnekoder):
             fila.write(f"{kode}, {studiepoeng[i]}, {semestre[i]}\n")
-
     print("Laget fil med emner")

@@ -1,4 +1,4 @@
-# Printer registretre emner
+# Skriv ut emner
 from emner import emnekoder, semestre, studiepoeng
 
 def kjør3():

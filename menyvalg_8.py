@@ -1,3 +1,0 @@
-#Avslutt
-
-print('Avslutter')

@@ -1,4 +1,4 @@
-# menyvalg_2.py
+# Legger til emne til studieplan
 from studieplan import legg_til_emne
 
 def kjør2():

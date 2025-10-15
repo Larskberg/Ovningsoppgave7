@@ -1,3 +1,4 @@
+# Legg til emne i studieplan
 from studieplan import legg_til_emne
 
 def kjør2():

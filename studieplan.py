@@ -1,4 +1,4 @@
-# studieplan.py
+# Studieplanen, sjekker gjennom alle krav før man kan legge et emne inn i studieplanen
 from emner import emnekoder, semestre, studiepoeng
 
 studieplan = [[] for _ in range(6)]
@@ -39,4 +39,3 @@ def legg_til_emne(emne_index, semester_nr):
 
 def hent_studieplan():
     return studieplan
-

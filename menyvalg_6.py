@@ -1,27 +1,20 @@
-#lag en fil av studieplanen
+# Lagre studieplan til fil
 from emner import emnekoder, semestre, studiepoeng
 from studieplan import hent_studieplan
 
-studieplan = hent_studieplan()
-
-def studieplanfil(studieplan):
+def studieplanfil():
     filnavn = 'studieplan.txt'
+    studieplan = hent_studieplan()
     with open(filnavn, "w") as fila:
-        for liste in studieplan:
-            semester_linje = f'{liste + 1}. semster:\n'
-            fila.write(semester_linje)
-            for i, liste in studieplan:
-                linje = f'{emnekoder[i]}, {studiepoeng[i]}, {semestre[i]}\n'
-                
-                fila.write(linje)
-            
-        print('Laget fil med studieplan')
-           
-def emnefil(emnekoder):
+        for sem_nr, sem in enumerate(studieplan, start=1):
+            fila.write(f"{sem_nr}. semester:\n")
+            for i in sem:
+                fila.write(f"{emnekoder[i]}, {studiepoeng[i]}, {semestre[i]}\n")
+    print("Laget fil med studieplan")
+
+def emnefil():
     filnavn = 'emner.txt'
     with open(filnavn, 'w') as fila:
-        for i in emnekoder:
-            linje = f'{emnekoder[i]}, {studiepoeng[i]}, {semestre[i]}\n'
-            fila.write(linje)
-            
-        print('Laget fil med emner')
+        for i, kode in enumerate(emnekoder):
+            fila.write(f"{kode}, {studiepoeng[i]}, {semestre[i]}\n")
+    print("Laget fil med emner")

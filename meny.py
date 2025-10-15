@@ -4,8 +4,7 @@ from menyvalg_2 import kjør2
 from menyvalg_3 import kjør3
 from menyvalg_4 import kjør4
 from menyvalg_5 import gyldig_semestre
-from menyvalg_6 import studieplanfil
-from menyvalg_6 import emnefil
+from menyvalg_6 import studieplanfil, emnefil
 from menyvalg_7 import les_fra_fil
 
 def meny():
@@ -44,5 +43,4 @@ def meny():
             print("Ugyldig valg.")
 
 if __name__ == "__main__":
-
     meny()

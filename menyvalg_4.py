@@ -1,3 +1,4 @@
+# Skriv ut studieplan
 from emner import emnekoder, studiepoeng
 from studieplan import hent_studieplan
 

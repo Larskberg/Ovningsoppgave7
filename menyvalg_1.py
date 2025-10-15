@@ -1,3 +1,4 @@
+# Lager et nytt emne
 from emner import emnekoder, semestre, studiepoeng
 
 def kjør1():
@@ -8,4 +9,5 @@ def kjør1():
     emnekoder.append(kode)
     semestre.append(sem)
     studiepoeng.append(sp)
+
     print(f"Emnet {kode} ({sem}, {sp} sp) er registrert.")

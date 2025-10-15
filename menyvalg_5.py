@@ -29,7 +29,6 @@ def gyldig_semestre(studieplan):
         
 
 
-
 #gjøre om emne_index til studiepoeng
 
 #sjekke for hvert semester at det er 30poeng

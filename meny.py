@@ -1,6 +1,6 @@
 # Hovedmeny
 from menyvalg_1 import lag_nytt_emne
-from menyvalg_2 import kjør2
+from menyvalg_2 import legg_til_nytt_emne
 from menyvalg_3 import kjør3
 from menyvalg_4 import kjør4
 from menyvalg_5 import gyldig_semestre
@@ -25,7 +25,7 @@ def meny():
         if valg == "1":
             lag_nytt_emne()
         elif valg == "2":
-            kjør2()
+            legg_til_nytt_emne()
         elif valg == "3":
             kjør3()
         elif valg == "4":
@@ -46,5 +46,6 @@ def meny():
 
 if __name__ == "__main__":
     meny()
+
 
 

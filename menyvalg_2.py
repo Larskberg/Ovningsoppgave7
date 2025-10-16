@@ -1,4 +1,4 @@
-# menyvalg_2.py
+# Legg til nytt emne ved bruk av studieplan.py, sjekk om gyldighet skjer via studieplan.py
 from studieplan import legg_til_emne
 
 

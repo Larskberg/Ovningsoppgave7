@@ -1,4 +1,6 @@
-# Hoved fil som håndterer studieplanen og alle gyldighetssjekkene som må gjørs, hver sjekk har kommentar over for lesbarhet
+# Hoved fil som håndterer studieplanen og alle gyldighetssjekkene som må gjørs.
+# Hver sjekk har kommentar over for lesbarhet.
+
 from emner import emnekoder, semestre, studiepoeng
 
 studieplan = [[] for _ in range(6)]
@@ -41,4 +43,5 @@ def legg_til_emne(emne_index, semester_nr):
 
 def hent_studieplan():
     return studieplan
+
 

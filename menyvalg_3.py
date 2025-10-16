@@ -1,4 +1,4 @@
-# menyvalg_3.py
+# Printer ut registrerte emner og indekser
 from emner import emnekoder, semestre, studiepoeng
 
 

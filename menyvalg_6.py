@@ -16,7 +16,7 @@ def studieplanfil():
                     )
         print("Laget fil med studieplan")
     except TypeError:
-        print('Kan ikkke lage studieplanfil')
+        print('Kan ikke lage studieplanfil')
 
 def emnefil():
     try:
@@ -27,4 +27,5 @@ def emnefil():
         print("Laget fil med emner")
     except TypeError:
         print('Kan ikke lage emnefil')
+
 

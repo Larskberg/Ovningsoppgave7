@@ -1,7 +1,7 @@
 # Hovedmeny
 from menyvalg_1 import lag_nytt_emne
 from menyvalg_2 import legg_til_nytt_emne
-from menyvalg_3 import kjør3
+from menyvalg_3 import print_ut_emner
 from menyvalg_4 import kjør4
 from menyvalg_5 import gyldig_semestre
 from menyvalg_6 import studieplanfil, emnefil
@@ -27,7 +27,7 @@ def meny():
         elif valg == "2":
             legg_til_nytt_emne()
         elif valg == "3":
-            kjør3()
+            print_ut_emner()
         elif valg == "4":
             kjør4()
         elif valg == "5":
@@ -46,6 +46,7 @@ def meny():
 
 if __name__ == "__main__":
     meny()
+
 
 
 

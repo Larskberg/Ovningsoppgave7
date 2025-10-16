@@ -1,5 +1,5 @@
 # Hovedmeny
-from menyvalg_1 import kjør1
+from menyvalg_1 import lag_nytt_emne
 from menyvalg_2 import kjør2
 from menyvalg_3 import kjør3
 from menyvalg_4 import kjør4
@@ -23,7 +23,7 @@ def meny():
         valg = input("Velg: ")
 
         if valg == "1":
-            kjør1()
+            lag_nytt_emne()
         elif valg == "2":
             kjør2()
         elif valg == "3":
@@ -46,4 +46,5 @@ def meny():
 
 if __name__ == "__main__":
     meny()
+
 

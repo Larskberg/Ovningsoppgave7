@@ -1,14 +1,15 @@
-# Studieplanen, sjekker gjennom alle krav før man kan legge et emne inn i studieplanen
+# studieplan.py
 from emner import emnekoder, semestre, studiepoeng
 
 studieplan = [[] for _ in range(6)]
+
 
 def legg_til_emne(emne_index, semester_nr):
     # Sjekk at indeksen er gyldig
     if emne_index < 0 or emne_index >= len(emnekoder):
         print("Ugyldig emneindeks.")
         return
-    
+
     # Hent emnekoden vi prøver å legge til
     kode = emnekoder[emne_index]
 
@@ -36,6 +37,7 @@ def legg_til_emne(emne_index, semester_nr):
     # Legg til emnet
     studieplan[semester_nr-1].append(emne_index)
     print(f"Emnet {kode} lagt til i semester {semester_nr}.")
+
 
 def hent_studieplan():
     return studieplan

@@ -1,6 +1,7 @@
-# Skriv ut studieplan
+# menyvalg_4.py
 from emner import emnekoder, studiepoeng
 from studieplan import hent_studieplan
+
 
 def kjør4():
     print("\nStudieplan:")

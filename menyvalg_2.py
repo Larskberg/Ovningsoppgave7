@@ -1,5 +1,6 @@
-# Legg til emne i studieplan
+# menyvalg_2.py
 from studieplan import legg_til_emne
+
 
 def kjør2():
     print("\n--- Legg til emne i studieplan ---")

@@ -1,5 +1,6 @@
-# Skriv ut emner
+# menyvalg_3.py
 from emner import emnekoder, semestre, studiepoeng
+
 
 def kjør3():
     print("\nRegistrerte emner:")

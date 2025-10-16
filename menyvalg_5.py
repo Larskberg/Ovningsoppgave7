@@ -1,6 +1,7 @@
-# Sjekk studieplan for gyldighet
+# menyvalg_5.py
 from studieplan import hent_studieplan
 from emner import studiepoeng
+
 
 def gyldig_semestre():
     studieplan = hent_studieplan()

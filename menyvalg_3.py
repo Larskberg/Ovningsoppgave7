@@ -2,7 +2,7 @@
 from emner import emnekoder, semestre, studiepoeng
 
 
-def kjør3():
+def print_ut_emner():
     print("\nRegistrerte emner:")
     if not emnekoder:
         print("Ingen emner registrert ennå.")

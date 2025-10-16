@@ -46,8 +46,3 @@ def meny():
 
 if __name__ == "__main__":
     meny()
-
-
-
-
-

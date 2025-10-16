@@ -1,4 +1,4 @@
-# menyvalg_1.py
+# Lag nytt emne
 from emner import emnekoder, semestre, studiepoeng
 
 
@@ -11,3 +11,4 @@ def kjør1():
     semestre.append(sem)
     studiepoeng.append(sp)
     print(f"Emnet {kode} ({sem}, {sp} sp) er registrert.")
+

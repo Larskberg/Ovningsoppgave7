@@ -1,4 +1,4 @@
-#les opp emnene i fil fra menyvalg 6
+# Leser opp emner fra txt fil lagret fra menyvalg 6
 def les_fra_fil():
     with open('studieplan.txt', 'r') as fila:
         print('Studieplan:')
@@ -13,4 +13,5 @@ def les_fra_fil():
             print(linje + '\n')
 
     
+
             

@@ -2,7 +2,7 @@
 from studieplan import legg_til_emne
 
 
-def kjør2():
+def legg_til_nytt_emne():
     print("\n--- Legg til emne i studieplan ---")
     emne_index = int(input("Indeks på emne: "))
     sem_nr = int(input("Semester (1-6): "))

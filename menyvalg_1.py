@@ -1,6 +1,4 @@
-# Lag nytt emne
-from emner import emnekoder, semestre, studiepoeng
-
+from emner import Emne, emner
 
 def lag_nytt_emne():
     try:
@@ -9,8 +7,12 @@ def lag_nytt_emne():
 
         # Valider semester
         while True:
-            sem = input("Semester (høst/vår): ").lower()
-            if sem in ("høst", "vår"):
+            sem_input = input("Semester (høst/vår): ").lower()
+            if sem_input == "høst":
+                sem = "H"
+                break
+            elif sem_input == "vår":
+                sem = "V"
                 break
             else:
                 print("Ugyldig valg. Du må skrive 'høst' eller 'vår'.")
@@ -18,11 +20,16 @@ def lag_nytt_emne():
         # Valider studiepoeng
         sp = int(input("Studiepoeng: "))
 
-        emnekoder.append(kode)
-        semestre.append(sem)
-        studiepoeng.append(sp)
-        print(f"Emnet {kode} ({sem}, {sp} sp) er registrert.")
+        # Sjekk konsistens: samme emne kan ikke ha både H og V
+        for e in emner:
+            if e.kode == kode and e.semester != sem:
+                print(f"Feil: Emnet {kode} er allerede registrert med semester {e.semester}.")
+                return
+
+        nytt_emne = Emne(kode, sem, sp)
+        emner.append(nytt_emne)
+
+        print(f"Emnet {nytt_emne} er registrert.")
 
     except ValueError:
         print("Ugyldig input. Studiepoeng må være et tall.")
-        

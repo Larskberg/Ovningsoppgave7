@@ -1,11 +1,11 @@
-# Printer ut studieplan
-from emner import emnekoder, studiepoeng
-from studieplan import hent_studieplan
+from emner import emner
 
+def print_ut_emner():
+    print("\n--- Registrerte emner ---")
+    if not emner:
+        print("Ingen emner registrert ennå.")
+        return
 
-def print_studieplan():
-    print("\nStudieplan:")
-    for i, sem in enumerate(hent_studieplan(), start=1):
-        total_sp = sum(studiepoeng[j] for j in sem)
-        emner = [emnekoder[j] for j in sem]
-        print(f"Semester {i}: {emner} ({total_sp} sp)")
+    for i, e in enumerate(emner):
+        # Bruker __str__-metoden fra Emne-klassen for pen utskrift
+        print(f"{i}: {e}")

@@ -29,12 +29,15 @@ def gyldig_semestre():
         print("Ugyldig input. Må være et tall.")
         return
 
-    #sjekker at det er 30 sp i hvert semester
-    #hvis det ikke er det, legger til i ugyldig liste og skriver ut
-    for sem, Emner in enumerate(studieplaner[valgt_plan].semestre):
-        poeng = sum(emne.studiepoeng for emne in Emner)
-        if poeng != 30:
-            ugyldig.append((sem + 1, poeng))
+    # Sjekker at det er 30 sp i hvert semester
+    # Hvis det ikke er det, legger til i ugyldig liste og skriver ut
+    for sem, emneliste in studieplaner[valgt_plan].semestre.items():
+        if emneliste:
+            poeng = sum(emne.studiepoeng for emne in emneliste)
+            if poeng != 30:
+                ugyldig.append((sem, poeng))
+        else:
+            ugyldig.append((sem, 0))
 
     if not ugyldig:
         print("Studieplanen er gyldig")

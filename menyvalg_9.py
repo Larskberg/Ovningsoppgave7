@@ -9,9 +9,9 @@ def lagre_til_fil():
             
             with open(filnavn, "w") as fila:
                 for key in studieplaner:
-                    fila.write(f"\n{studieplaner[key].plan_id}\n {studieplaner[key].tittel}")
+                    fila.write(f"\n{studieplaner[key].plan_id}\n {studieplaner[key].tittel}\n")
                     for sem, Emner in studieplaner[key].semestre.items():
-                        fila.write(f'{sem}. semester:\n')
+                        fila.write(f'\n{sem}. semester:\n')
                         if emner:
                             for emne in Emner:
                                 fila.write(f" - {emne}")
@@ -25,11 +25,11 @@ def lagre_til_fil():
 
 
 
-   
+
         try:
             filnavn = 'emner.txt'
             with open(filnavn, 'w') as fila:
-                for i, e in enumerate(emner):
+                for i, e in enumerate(emner, start=1):
                     fila.write(f'{i}: {e}\n')
             print("Laget fil med emner")
         except TypeError:

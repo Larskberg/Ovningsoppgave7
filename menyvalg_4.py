@@ -7,5 +7,4 @@ def print_ut_emner():
         return
 
     for i, e in enumerate(emner):
-        # Bruker __str__-metoden fra Emne-klassen for pen utskrift
         print(f"{i}: {e}")

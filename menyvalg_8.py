@@ -13,7 +13,7 @@ def finn_studieplaner_med_emne():
     if not emne_finnes:
         print('Emne er ikke registrert')
         return
-
+#liste med planer som har gitt emne i seg
     planer_med_emne = []
     for plan in studieplaner.values():
         funnet = False
@@ -25,10 +25,11 @@ def finn_studieplaner_med_emne():
                     break
             if funnet:
                 break
-
+#hvis noen planer har emnet, så ligger planene i lista og blir skrevet ut
     if planer_med_emne:
         print(f'\nStudieplaner som inneholder emne {sjekk}:')
         for plan_tittel in planer_med_emne:
             print(f' - {plan_tittel}')
     else:
         print(f'Emne {sjekk} finnes ikke i noen studieplan')
+

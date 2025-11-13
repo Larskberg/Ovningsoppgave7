@@ -6,5 +6,5 @@ def print_ut_emner():
         print("Ingen emner registrert ennå.")
         return
 
-    for i, e in enumerate(emner):
+    for i, e in enumerate(emner, start=1):
         print(f"{i}: {e}")

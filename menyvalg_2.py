@@ -44,12 +44,26 @@ def legg_til_nytt_emne():
         print("Ugyldig input. Må være et tall.")
         return
 
+    # Velg semester
+    print("Tilgjengelige semestre:")
+    for sem in studieplaner[valgt_plan].semestre.keys():
+        print(f" - Semester {sem}")
+    
+    try:
+        valgt_semester = int(input("Velg semester (nummer 1-6): "))
+        if valgt_semester < 1 or valgt_semester > 6:
+            print("Ugyldig semester.")
+            return
+    except ValueError:
+        print("Ugyldig input. Må være et tall.")
+        return
+
     # Sjekker konsistens
-    for e in studieplaner[valgt_plan]:
-        if e.kode == valgt_emne.kode and e.semester != valgt_emne.semester:
-            print(f"Feil: Emnet {valgt_emne.kode} finnes allerede i {valgt_plan} med semester {e.semester}.")
+    for e in studieplaner[valgt_plan].semestre[valgt_semester]:
+        if e.kode == valgt_emne.kode:
+            print(f"Feil: Emnet {valgt_emne.kode} finnes allerede i semester {valgt_semester}.")
             return
 
-    # Legg til emnet i valgt plan
-    studieplaner[valgt_plan].append(valgt_emne)
-    print(f"Emnet {valgt_emne} er lagt til i studieplan '{valgt_plan}'.")
+    # Legg til emnet i valgt semester
+    studieplaner[valgt_plan].semestre[valgt_semester].append(valgt_emne)
+    print(f"Emnet {valgt_emne} er lagt til i studieplan '{valgt_plan}', semester {valgt_semester}.")

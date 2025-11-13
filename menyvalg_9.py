@@ -10,7 +10,7 @@ def lagre_til_fil():
             with open(filnavn, "w") as fila:
                 #for hver studieplan:
                 for key in studieplaner:
-                    fila.write(f"\n{studieplaner[key].plan_id}\n {studieplaner[key].tittel}\n")
+                    fila.write(f"\n{studieplaner[key].plan_id}: {studieplaner[key].tittel}\n")
                     for sem, Emner in studieplaner[key].semestre.items():
                         fila.write(f'\n{sem}. semester:\n')
                         if emner:
@@ -35,5 +35,6 @@ def lagre_til_fil():
             print("Laget fil med emner")
         except TypeError:
             print('Kan ikke lage emnefil')
+
 
 

@@ -1,4 +1,4 @@
-#menyvagl 7   
+#menyvalg 7   
 from emner import emner
 from menyvalg_5 import studieplaner, Studieplan
 
@@ -7,7 +7,7 @@ def gyldig_semestre():
 #liste for ugyldige semestre
     ugyldig = []
     
-    print("\n--- Skriv ut studieplan ---")
+    print("\n--- Gyldighetsjekk ---")
 
     # Sjekk om det finnes noen studieplaner
     if not studieplaner:
@@ -18,7 +18,8 @@ def gyldig_semestre():
     print("Tilgjengelige studieplaner:")
     for i, plan in enumerate(studieplaner.keys(), start=1):
         print(f"{i}. {plan}")
-#sjekker gyldig studieplan index
+
+    # Sjekker gyldig studieplan index
     try:
         plan_valg = int(input("Velg studieplan (nummer): "))
         if plan_valg < 1 or plan_valg > len(studieplaner):

@@ -3,6 +3,7 @@ from emner import emner
 from menyvalg_5 import studieplaner, Studieplan
 
 def finn_studieplaner_med_emne():
+    print('\n--- Finn studieplan med emne ---')
     print('Emner:')
     for emne in emner:
         print(f' - {emne}')

@@ -20,12 +20,7 @@ def lagre_til_fil():
                             fila.write(' Ingen emner')
             print("Laget fil med studieplan")
         except TypeError:
-            print('Kan ikkke lage studieplanfil')
-
-
-
-
-
+            print('Kan ikke lage studieplanfil')
 
         try:
             filnavn = 'emner.txt'
@@ -35,6 +30,3 @@ def lagre_til_fil():
             print("Laget fil med emner")
         except TypeError:
             print('Kan ikke lage emnefil')
-
-
-

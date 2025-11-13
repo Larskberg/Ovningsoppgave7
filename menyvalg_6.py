@@ -1,5 +1,4 @@
 #menyvalg 6, skriv ut en studieplan
-  
 
 from emner import emner
 from menyvalg_5 import studieplaner, Studieplan
@@ -16,7 +15,8 @@ def skriv_ut_studieplan():
     print("Tilgjengelige studieplaner:")
     for i, plan in enumerate(studieplaner.keys(), start=1):
         print(f"{i}. {plan}")
-
+    
+    # Sjekker gyldig studieplan index
     try:
         plan_valg = int(input("Velg studieplan (nummer): "))
         if plan_valg < 1 or plan_valg > len(studieplaner):

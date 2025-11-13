@@ -10,7 +10,6 @@ from menyvalg_8 import finn_studieplaner_med_emne
 from menyvalg_9 import lagre_til_fil
 from menyvalg_10 import les_fra_fil
 
-
 def meny():
     while True:
         print("\n--- Hovedmeny ---")

@@ -18,7 +18,7 @@ class Studieplan:
         return f"Studieplan {self.plan_id}: {self.tittel}"
 
 
-# Felles ordbok med studieplaner: id -> Studieplan (brukes av menyvalg 2 og 3)
+# Felles ordbok med studieplaner: id -> Studieplan
 studieplaner = {}
 
 
@@ -37,3 +37,4 @@ def lag_ny_studieplan():
     studieplaner[plan_id] = ny_plan
 
     print(f"Ny studieplan opprettet: {ny_plan}")
+

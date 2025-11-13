@@ -34,7 +34,11 @@ def skriv_ut_studieplan():
 
     # Vis emner i valgt plan
     print(f"Studieplan '{valgt_plan}':")
-    for sem in studieplaner[valgt_plan].semestre:
-        print(f'Semester: {sem}')
-        for i, e in enumerate(studieplaner[valgt_plan], start=1):
-            print(f"{i}. {e}")
+    
+    for sem, Emner in studieplaner[valgt_plan].semestre.items():
+        print(f'{sem}. semester:\n')
+        if emner:
+            for emne in Emner:
+                print(f" - {emne}")
+        else: 
+            print(' Ingen emner')

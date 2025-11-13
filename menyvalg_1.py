@@ -17,11 +17,14 @@ def lag_nytt_emne():
             else:
                 print("Ugyldig valg. Du må skrive 'høst' eller 'vår'.")
 
-        # Valider studiepoeng
         sp = int(input("Studiepoeng: "))
 
-        # Sjekk konsistens: samme emne kan ikke ha både H og V
         for e in emner:
+            # Hindre nøyaktig duplikat (samme kode og semester)
+            if e.kode == kode and e.semester == sem:
+                print(f"Feil: Emnet {kode} er allerede registrert for semester {e.semester}.")
+                return
+            # Samme emne kan ikke ha forskjellige semestre
             if e.kode == kode and e.semester != sem:
                 print(f"Feil: Emnet {kode} er allerede registrert med semester {e.semester}.")
                 return
